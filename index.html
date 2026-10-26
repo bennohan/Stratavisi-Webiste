@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stratavisi Digimart | Pendampingan Digital Marketing untuk UMKM</title>
+  <meta name="description"
+    content="Stratavisi Digimart adalah jasa pendampingan digital marketing untuk UMKM, berfokus pada branding dan konten Instagram.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/logo_stratavisi.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS & Konfigurasi -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/tailwind-config.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Custom Scripts -->
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body class="font-sans text-ink bg-paper antialiased">
+
+  <!-- Bentuk ornamen (dipakai berulang lewat <use>) -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <symbol id="ast" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <rect x="43" y="0" width="14" height="100" />
+        <rect x="43" y="0" width="14" height="100" transform="rotate(45 50 50)" />
+        <rect x="43" y="0" width="14" height="100" transform="rotate(90 50 50)" />
+        <rect x="43" y="0" width="14" height="100" transform="rotate(135 50 50)" />
+      </g>
+    </symbol>
+    <symbol id="ring" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10" />
+    </symbol>
+  </svg>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 nav border-b border-black/10">
+    <nav class="mx-auto max-w-6xl px-5 h-16 flex items-center justify-between">
+      <a href="#beranda" class="flex items-center gap-2">
+        <img src="./assets/logo_stratavisi.png" alt="" class="h-8 w-auto" onerror="this.remove()">
+        <span class="display text-sm md:text-base text-brand">Stratavisi Digimart</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a class="hover:text-brand" href="#tentang">Tentang Kami</a></li>
+        <li><a class="hover:text-brand" href="#layanan">Layanan</a></li>
+        <li><a class="hover:text-brand" href="#portofolio">Portofolio</a></li>
+        <li><a class="rounded-md bg-brand text-brand-ink px-4 py-2" href="#kontak">Hubungi Kami</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden p-2 -mr-2" aria-label="Buka menu" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </nav>
+    <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 text-base font-medium border-t border-black/10">
+      <li><a class="block py-3" href="#tentang">Tentang Kami</a></li>
+      <li><a class="block py-3" href="#layanan">Layanan</a></li>
+      <li><a class="block py-3" href="#portofolio">Portofolio</a></li>
+      <li><a class="block py-3 text-brand font-bold" href="#kontak">Hubungi Kami</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section id="beranda" class="hero relative overflow-hidden text-brand-ink">
+      <svg class="orn text-accent" style="--s:14rem;--r:0deg;right:-5rem;bottom:-5rem">
+        <use href="#ast" />
+      </svg>
+      <svg class="orn text-accent" style="--s:3.5rem;--r:0deg;right:7rem;top:2.5rem;animation-delay:-4s">
+        <use href="#ring" />
+      </svg>
+      <svg class="orn text-white" style="--s:5rem;--r:20deg;right:45%;bottom:1.5rem;opacity:.25;animation-delay:-2s">
+        <use href="#ast" />
+      </svg>
+
+      <div
+        class="relative z-10 mx-auto max-w-6xl px-5 py-20 md:py-32 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-12 items-center">
+        <div>
+          <h1 class="max-w-3xl text-3xl md:text-5xl leading-[1.2]">Teman Tumbuh untuk Brand UMKM.</h1>
+          <p class="mt-6 max-w-xl text-lg opacity-90">
+            Stratavisi adalah jasa pendampingan digital marketing yang berfokus pada branding dan konten Instagram agar
+            akun bisnis lebih rapi, konsisten, dan terarah tanpa kehilangan kendali atas akun sendiri.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a href="#layanan" class="rounded-md bg-accent text-accent-ink font-bold px-6 py-3">Lihat layanan</a>
+            <a href="#kontak" class="rounded-md border border-white/70 px-6 py-3 font-medium">Hubungi kami</a>
+          </div>
+        </div>
+
+        <div class="order-first md:order-last flex justify-center">
+          <img src="./assets/logo-hero.png" alt="Logo Stratavisi Digimart" class="w-40 md:w-72 lg:w-96 h-auto"
+            onerror="this.remove()">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TENTANG KAMI ==================== -->
+    <section id="tentang" class="relative overflow-hidden py-20 md:py-28">
+      <svg class="orn text-brand" style="--s:9rem;--r:12deg;left:-3.5rem;top:6rem">
+        <use href="#ast" />
+      </svg>
+      <svg class="orn text-accent" style="--s:4rem;--r:30deg;right:1.5rem;top:2rem;animation-delay:-3s">
+        <use href="#ast" />
+      </svg>
+      <div class="relative z-10 mx-auto max-w-6xl px-5">
+        <div class="reveal">
+          <h2 class="text-2xl md:text-4xl">Tentang kami</h2>
+          <p class="mt-4 text-muted leading-relaxed max-w-xl">Stratavisi hadir untuk mengatasi masalah umum bisnis yang
+            sudah punya akun Instagram, tetapi kontennya tidak konsisten, tampilan feed tidak punya identitas visual
+            yang
+            jelas, bio kurang informatif, dan tidak ada strategi yang jelas. Kami membantu UMKM membangun kehadiran
+            digital yang profesional, konsisten, dan terukur, tanpa perlu mengorbankan waktu operasional harian bisnis.
+          </p>
+        </div>
+
+        <div class="mt-10 reveal" role="region" aria-roledescription="carousel" aria-label="Visi dan misi">
+          <div id="slider" tabindex="0"
+            class="flex overflow-x-auto snap-x snap-mandatory rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <article class="slide bg-brand text-brand-ink">
+              <img src="./assets/logo_stratavisi.png" alt="" class="absolute right-6 bottom-6 h-24 opacity-15"
+                onerror="this.remove()">
+              <h3 class="text-sm opacity-80">Visi</h3>
+              <p class="display mt-4 max-w-3xl text-xl md:text-3xl leading-snug">“Menjadi partner digital bagi
+                perusahaan global.”</p>
+            </article>
+            <article class="slide bg-soft">
+              <h3 class="text-sm text-muted">Misi 1</h3>
+              <p class="display mt-4 max-w-3xl text-lg md:text-2xl leading-snug">Membangun identitas digital yang
+                profesional.</p>
+              <p class="mt-3 max-w-2xl text-muted">Kami menyediakan layanan pendampingan setup profil digital dan
+                identitas visual Instagram yang profesional.</p>
+            </article>
+            <article class="slide bg-soft">
+              <h3 class="text-sm text-muted">Misi 2</h3>
+              <p class="display mt-4 max-w-3xl text-lg md:text-2xl leading-snug">Menghadirkan konten yang konsisten dan
+                strategis.</p>
+              <p class="mt-3 max-w-2xl text-muted">Kami memproduksi konten Instagram (feed dan story) yang konsisten,
+                estetis, dan strategis.</p>
+            </article>
+            <article class="slide bg-soft">
+              <h3 class="text-sm text-muted">Misi 3</h3>
+              <p class="display mt-4 max-w-3xl text-lg md:text-2xl leading-snug">Mengoptimalkan strategi melalui data.
+              </p>
+              <p class="mt-3 max-w-2xl text-muted">Kami menyediakan sistem pelaporan performa (insight) berbasis data
+                yang transparan dan terukur.</p>
+            </article>
+            <article class="slide bg-soft">
+              <h3 class="text-sm text-muted">Misi 4</h3>
+              <p class="display mt-4 max-w-3xl text-lg md:text-2xl leading-snug">Memperluas peluang melalui kemitraan
+                digital.</p>
+              <p class="mt-3 max-w-2xl text-muted">Membangun ekosistem kemitraan digital dengan UMKM, startup, dan
+                jejaring bisnis potensial.</p>
+            </article>
+          </div>
+          <div class="mt-5 flex items-center justify-between gap-4">
+            <div id="dots" class="flex gap-2"></div>
+            <div class="flex items-center gap-2">
+              <button id="playBtn"
+                class="h-11 px-4 rounded-full border border-black/20 text-sm font-medium hover:bg-soft">Jeda</button>
+              <button id="prevBtn" aria-label="Kartu sebelumnya"
+                class="h-11 w-11 rounded-full border border-black/20 grid place-items-center hover:bg-soft">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 6l-6 6 6 6" />
+                </svg>
+              </button>
+              <button id="nextBtn" aria-label="Kartu berikutnya"
+                class="h-11 w-11 rounded-full border border-black/20 grid place-items-center hover:bg-soft">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LAYANAN ==================== -->
+    <section id="layanan" class="relative overflow-hidden py-20 md:py-28 bg-soft">
+      <svg class="orn text-accent" style="--s:11rem;--r:-10deg;right:-4rem;bottom:-2rem">
+        <use href="#ast" />
+      </svg>
+      <div class="relative z-10 mx-auto max-w-6xl px-5">
+        <div class="reveal">
+          <h2 class="text-2xl md:text-4xl">Layanan kami</h2>
+          <p class="mt-4 text-muted max-w-md">Apa saja yang bisa kami kerjakan untuk Anda.</p>
+        </div>
+        <ul class="mt-10 grid md:grid-cols-3 gap-5 reveal">
+          <li class="rounded-lg bg-paper p-7 border border-black/10 transition hover:-translate-y-1 hover:border-brand">
+            <h3 class="text-base text-brand leading-snug">Setup profil profesional</h3>
+            <p class="mt-3 text-muted">Penataan bio, highlight, dan link-in-bio.</p>
+          </li>
+          <li class="rounded-lg bg-paper p-7 border border-black/10 transition hover:-translate-y-1 hover:border-brand">
+            <h3 class="text-base text-brand leading-snug">Produksi konten bulanan</h3>
+            <p class="mt-3 text-muted">Konten feed dan story yang konsisten dan estetis.</p>
+          </li>
+          <li class="rounded-lg bg-paper p-7 border border-black/10 transition hover:-translate-y-1 hover:border-brand">
+            <h3 class="text-base text-brand leading-snug">Laporan pertumbuhan</h3>
+            <p class="mt-3 text-muted">Laporan insight sebagai bukti hasil kerja.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== PORTOFOLIO ==================== -->
+    <section id="portofolio" class="relative overflow-hidden py-20 md:py-28">
+      <svg class="orn text-brand" style="--s:10rem;--r:8deg;right:-3rem;top:4rem;animation-delay:-2s">
+        <use href="#ast" />
+      </svg>
+      <svg class="orn text-accent" style="--s:5rem;--r:25deg;left:1rem;bottom:2rem;animation-delay:-6s">
+        <use href="#ast" />
+      </svg>
+      <div class="relative z-10 mx-auto max-w-6xl px-5">
+        <div class="reveal">
+          <h2 class="text-2xl md:text-4xl">Portofolio</h2>
+          <p class="mt-4 text-muted max-w-xl">Beberapa proyek yang pernah kami kerjakan.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+          <!-- Ganti kotak abu-abu dengan <img src="./assets/proyek-1.jpg" alt="..." class="aspect-[4/3] w-full object-cover rounded-md"> -->
+          <article>
+            <div class="aspect-[4/3] bg-soft grid place-items-center text-muted text-sm rounded-md">Foto proyek 1</div>
+            <h3 class="mt-4 text-base">Nama proyek 1</h3>
+            <p class="text-muted text-sm">Klien, tahun, dan satu kalimat hasil.</p>
+          </article>
+          <article>
+            <div class="aspect-[4/3] bg-soft grid place-items-center text-muted text-sm rounded-md">Foto proyek 2</div>
+            <h3 class="mt-4 text-base">Nama proyek 2</h3>
+            <p class="text-muted text-sm">Klien, tahun, dan satu kalimat hasil.</p>
+          </article>
+          <article>
+            <div class="aspect-[4/3] bg-soft grid place-items-center text-muted text-sm rounded-md">Foto proyek 3</div>
+            <h3 class="mt-4 text-base">Nama proyek 3</h3>
+            <p class="text-muted text-sm">Klien, tahun, dan satu kalimat hasil.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== KONTAK ==================== -->
+    <section id="kontak" class="relative overflow-hidden py-20 md:py-28 bg-brand text-brand-ink">
+      <svg class="orn text-accent" style="--s:12rem;--r:15deg;left:-4rem;bottom:-3rem">
+        <use href="#ast" />
+      </svg>
+      <svg class="orn text-white" style="--s:4rem;--r:0deg;right:2rem;top:2rem;opacity:.2;animation-delay:-5s">
+        <use href="#ring" />
+      </svg>
+      <div class="relative z-10 mx-auto max-w-6xl px-5 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img src="./assets/logo_stratavisi.png" alt="Stratavisi Digimart" class="h-10 mb-6" onerror="this.remove()">
+          <h2 class="text-2xl md:text-4xl leading-snug">Tertarik dengan jasa kami?</h2>
+          <p class="mt-4 opacity-90 max-w-md">Ini saatnya untuk “Tumbuh”. Ceritakan kebutuhan Anda lewat WhatsApp atau
+            email, kami balas di jam kerja.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <!-- Ganti 62812XXXXXXXX dengan nomor WhatsApp (format 62, tanpa 0 dan tanpa +) -->
+            <a href="https://wa.me/6289626046100?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20Stratavisi"
+              class="rounded-md bg-accent text-accent-ink font-bold px-6 py-3" target="_blank" rel="noopener">Chat
+              WhatsApp</a>
+            <a href="https://www.instagram.com/stratavisi.digimart/" target="_blank" rel="noopener noreferrer"
+              class="rounded-md border border-white/70 px-6 py-3 font-medium">
+              Kunjungi Instagram
+            </a>
+          </div>
+        </div>
+        <address class="not-italic space-y-4 reveal">
+          <div>
+            <div class="text-sm opacity-80">Instagram</div>
+            <div class="font-medium">@stratavisi.digimart</div>
+          </div>
+          <div>
+            <div class="text-sm opacity-80">Email</div>
+            <div class="font-medium">Stratavisi4@gmail.com</div>
+          </div>
+          <div>
+            <div class="text-sm opacity-80">Jam kerja</div>
+            <div class="font-medium">Senin sampai Jumat, 08.00 sampai 17.00 WIB</div>
+          </div>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-8 text-center text-sm text-muted">
+    <img src="./assets/logo_stratavisi.png" alt="" class="mx-auto h-8 mb-3" onerror="this.remove()">
+    &copy; <span id="year">2026</span> @stratavisi.digimart
+  </footer>
+
+</body>
+
+</html>

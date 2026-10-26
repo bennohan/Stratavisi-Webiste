@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Stratavisi Digimart - Custom Stylesheet
+   ========================================================================== */
+
+/* ====== GANTI PALET WARNA DI SINI SAJA ====== */
+:root {
+  --brand: #0A4CC9;        /* biru utama */
+  --brand-ink: #FFFFFF;
+  --accent: #00C2FF;       /* cyan */
+  --accent-ink: #06265E;   /* teks di atas tombol cyan */
+  --ink: #0B1B3A;
+  --muted: #4A5C7A;
+  --paper: #F8FCFF;
+  --soft: #E6F6FF;
+  --page-image: url('../assets/Background.png'); /* huruf besar/kecil nama file harus sama persis */
+  --page-overlay: linear-gradient(rgba(248, 252, 255, .85), rgba(248, 252, 255, .85));
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  background-color: var(--paper);
+  background-image: var(--page-overlay), var(--page-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* Typography Headings */
+h1,
+h2,
+h3,
+.display {
+  font-family: "Krona One", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Navigation blur */
+.nav {
+  background: rgba(248, 252, 255, .85);
+  backdrop-filter: blur(10px);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('../assets/background_hero.png');
+}
+
+/* Aksesibilitas fokus */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Ornamen melayang: atur posisi/ukuran/rotasi lewat style="" pada tiap elemen */
+.orn {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .35;
+  width: calc(var(--s) * .6);
+  height: calc(var(--s) * .6);
+  animation: drift 10s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .orn {
+    opacity: 1;
+    width: var(--s);
+    height: var(--s);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(calc(var(--r, 0deg) + 10deg));
+  }
+}
+
+/* Slider / Carousel Card */
+.slide {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    min-height: 20rem;
+    padding: 3.5rem;
+  }
+}
+
+/* Efek Muncul Halus (Scroll Reveal) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Aksesibilitas preferensi reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .orn {
+    animation: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.float {
+  animation: drift 10s ease-in-out infinite;
+  --r: 0deg;
+}
